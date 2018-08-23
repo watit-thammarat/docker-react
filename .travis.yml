@@ -7,3 +7,16 @@ before_install:
 
 script:
   - docker run tongnakub/docker-react npm run test -- --coverage
+
+# deploy:
+#   provider: elasticbeanstalk
+#   region: 'ap-southeast-1'
+#   app: 'docker'
+#   env: 'Docer-env',
+#   bucket_name: 'elasticbeanstalk-ap-southeast-1-306476627547'
+#   bucket_path: 'docker'
+#   on:
+#     branch: master
+#   access_key_id: $AWS_ACCESS_KEY
+#   secret_access_key:
+#     secure: '$AWS_SECRET_KEY'
